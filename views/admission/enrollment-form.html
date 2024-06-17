@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Form - Filamer Christian University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .enrollment-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        .enrollment-form h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #0E1133;
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            width: calc(50% - 10px);
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group.full-width {
+            width: 100%;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #0E1133;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #003060;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+            color: #0E1133;
+        }
+
+        .modal-content .btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #0E1133;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .modal-content .btn:hover {
+            background-color: #003060;
+        }
+    </style>
+</head>
+<body>
+    <div class="enrollment-form">
+        <h2>Enrollment Form</h2>
+        <form id="enrollmentForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" id="firstname" name="firstname">
+                </div>
+                <div class="form-group">
+                    <label for="middlename">Middlename</label>
+                    <input type="text" id="middlename" name="middlename">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="birthdate">Birthdate</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="form-group full-width">
+                <label for="course">Academic</label>
+                <select id="course" name="course" onchange="showSubOptions()">
+                    <option value="">Select an academic level</option>
+                    <option value="basic-education">Basic Education</option>
+                    <option value="higher-education">Higher Education</option>
+                </select>
+            </div>
+            <div class="form-group full-width" id="basicEducationGroup" style="display:none;">
+                <label for="basicEducation">Basic Education Programs</label>
+                <select id="basicEducation" name="basicEducation">
+                    <option value="Pre-School">Pre-School</option>
+                    <option value="Elementary">Elementary</option>
+                    <option value="Junior High School">Junior High School</option>
+                    <option value="Senior High School">Senior High School</option>
+                </select>
+            </div>
+            <div class="form-group full-width" id="higherEducationGroup" style="display:none;">
+                <label for="higherEducation">Higher Education Programs</label>
+                <select id="higherEducation" name="higherEducation">
+                    <option value="BSIT">BSIT</option>
+                    <option value="BSCS">BSCS</option>
+                    <option value="BSN">BSN</option>
+                    <option value="BSA">BSA</option>
+                    <option value="BSEd">BSEd</option>
+                </select>
+            </div>
+            <div class="form-group full-width">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h2>Success!</h2>
+            <p>Your enrollment has been submitted successfully.</p>
+            <a class="btn" href="../../index.html">Okay</a>
+        </div>
+    </div>
+
+    <script>
+        function showSubOptions() {
+            var courseSelect = document.getElementById('course');
+            var basicEducationGroup = document.getElementById('basicEducationGroup');
+            var higherEducationGroup = document.getElementById('higherEducationGroup');
+
+            // Hide both selects initially
+            basicEducationGroup.style.display = 'none';
+            higherEducationGroup.style.display = 'none';
+
+            // Show the appropriate select based on the user's choice
+            if (courseSelect.value === 'basic-education') {
+                basicEducationGroup.style.display = 'block';
+            } else if (courseSelect.value === 'higher-education') {
+                higherEducationGroup.style.display = 'block';
+            }
+        }
+
+        document.getElementById('enrollmentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successModal').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>

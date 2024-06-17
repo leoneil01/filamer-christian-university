@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+      .login-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+      .login-form h2 {
+        margin-bottom: 20px;
+        color: #0e1133;
+      }
+      .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .input-group input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      .btn-login {
+        background-color: #0e1133;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      .btn-login:hover {
+        background-color: #003060;
+      }
+      #hint {
+        margin-top: 10px;
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="username">Username: stud</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Password: stud</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button class="btn-login" type="button" onclick="validateLogin()">
+            Login
+          </button>
+          <p id="hint"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="../assets/js/script.js"></script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Filamer Christian University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            position: fixed;
+            height: 100%;
+            width: 250px;
+            background-color: #0E1133;
+            color: #ffffff;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575a89;
+        }
+
+        .main-content {
+            flex: 1;
+            position: absolute;
+            left: 250px;
+            width: calc(100% - 250px);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .profile, .courses, .grades, .announcements {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile h3, .courses h3, .grades h3, .announcements h3 {
+            margin-top: 0;
+        }
+
+        .profile-info, .course-list, .grade-list, .announcement-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .profile-info li, .course-list li, .grade-list li, .announcement-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .profile-info li:last-child, .course-list li:last-child, .grade-list li:last-child, .announcement-list li:last-child {
+            border-bottom: none;
+        }
+
+        .course-list li, .grade-list li {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Student Dashboard</h2>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Courses</a>
+        <a href="#">Grades</a>
+        <a href="#">Announcements</a>
+        <a href="#">Settings</a>
+        <a href="../../index.html">Logout</a>
+    </div>
+    <div class="main-content">
+        <div class="profile">
+            <h3>Profile</h3>
+            <ul class="profile-info">
+                <li>Name: Juan D. Cruz</li>
+                <li>Student ID: 21-00000</li>
+                <li>Email: juan@mail.com</li>
+                <li>Major: BSIT</li>
+            </ul>
+        </div>
+        <div class="courses">
+            <h3>Current Courses</h3>
+            <ul class="course-list">
+                <li>
+                    <span>Course 1: Introduction to Programming</span>
+                    <span>Professor: Mr. Lopez</span>
+                </li>
+                <li>
+                    <span>Course 2: Data Structures</span>
+                    <span>Professor: Mr. Odrunia</span>
+                </li>
+                <li>
+                    <span>Course 3: Algorithms</span>
+                    <span>Professor: Mr. Lacorte</span>
+                </li>
+            </ul>
+        </div>
+        <div class="grades">
+            <h3>Grades</h3>
+            <ul class="grade-list">
+                <li>
+                    <span>Introduction to Programming</span>
+                    <span>Grade: 1.00</span>
+                </li>
+                <li>
+                    <span>Data Structures</span>
+                    <span>Grade: 1.00</span>
+                </li>
+                <li>
+                    <span>Algorithms</span>
+                    <span>Grade: 1.00</span>
+                </li>
+            </ul>
+        </div>
+        <div class="announcements">
+            <h3>Announcements</h3>
+            <ul class="announcement-list">
+                <li>June 20, 2024: Midterm Exams start next week.</li>
+                <li>July 10, 2024: New library books have arrived.</li>
+                <li>August 5, 2024: Workshop on Laravel Framework.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

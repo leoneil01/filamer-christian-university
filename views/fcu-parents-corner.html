@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parent's Corner - Filamer Christian University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #0E1133;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #0E1133;
+            color: #ffffff;
+        }
+
+        .parent-info {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .newsletter {
+            border: 1px solid #0E1133;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pta-details {
+            border: 1px solid #0E1133;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #0E1133;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Function to subscribe to the newsletter
+        function subscribeNewsletter() {
+            var email = document.getElementById('email').value;
+            if (email === '') {
+                alert('Please enter your email to subscribe to the newsletter.');
+            } else {
+                alert('Thank you for subscribing to the newsletter!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Parent's Corner - Filamer Christian University</h1>
+    </div>
+    <div class="parent-info">
+        <div class="newsletter">
+            <h2>Newsletter Subscription</h2>
+            <p>Subscribe to our newsletter to receive updates and important information.</p>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+        <div class="pta-details">
+            <h2>Parent-Teacher Association (PTA) Details</h2>
+            <p>Contact: 09123456789</p>
+            <p>Meetings: Every Friday - 4:00 pm</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Filamer Christian University</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Filamer Christian University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #0E1133;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .faq-container {
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .category {
+            margin-bottom: 20px;
+        }
+
+        .category h2 {
+            cursor: pointer;
+            background-color: #0E1133;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .category h2:hover {
+            background-color: #ffffff;
+            color: #0E1133;
+            border: 1px solid #0E1133;
+        }
+
+        .question {
+            display: none;
+            padding: 15px;
+            border: 1px solid #0E1133;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .question p {
+            margin: 0 0 10px;
+        }
+    </style>
+    <script>
+        function toggleQuestion(category) {
+            var questions = document.querySelectorAll('.' + category + '-question');
+            questions.forEach(function (question) {
+                question.style.display = (question.style.display === 'none') ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Frequently Asked Questions - Filamer Christian University</h1>
+    </div>
+    <div class="faq-container">
+        <div class="category">
+            <h2 onclick="toggleQuestion('admission')">Admission</h2>
+            <div class="admission-question question">
+                <p><strong>Question 1:</strong> What are the requirements for admission?</p>
+                <p><strong>Answer:</strong> Applicants need to submit a completed application form, Live Birth Certificate (PSA), Report Card of previous school attended, Certificate of Good Moral(for transferee), Result of the Entrance Exam, 2 Pcs 2x2 Picture, Recommendation slip from FCU Guidance Office(for high school and college), White Long Folde, Report Card (Form 138 for college).</p>
+            </div>
+        </div>
+        <div class="category">
+            <h2 onclick="toggleQuestion('academics')">Academics</h2>
+            <div class="academics-question question">
+                <p><strong>Question 1:</strong> What programs do you offer?</p>
+                <p><strong>Answer:</strong> We offer a wide range of programs including Business Administration, Computer Science, Nursing, and Education.</p>
+                <p><strong>Question 2:</strong> How do I register for classes?</p>
+                <p><strong>Answer:</strong> Students can register for classes online through the university portal or by visiting the registrar's office.</p>
+            </div>
+        </div>
+        <div class="category">
+            <h2 onclick="toggleQuestion('fees')">Fees</h2>
+            <div class="fees-question question">
+                <p><strong>Question 1:</strong> Are there any scholarship opportunities?</p>
+                <p><strong>Answer:</strong> Yes, we offer various scholarships based on academic performance, financial need, and extracurricular involvement.</p>
+            </div>
+        </div>
+        <div class="category">
+            <h2 onclick="toggleQuestion('campuslife')">Campus Life</h2>
+            <div class="campuslife-question question">
+                <p><strong>Question 1:</strong> What extracurricular activities are available?</p>
+                <p><strong>Answer:</strong> We offer a variety of extracurricular activities including sports, clubs, student government, and volunteer opportunities.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

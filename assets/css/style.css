@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 150px;
+}
+
+.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.header .logo {
+  width: 90px;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.header ul li a {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.header ul li a:hover {
+  border-radius: 45px;
+  background-color: #fff;
+  box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
+  color: #0e1133;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+.hero .hero-title {
+  font-size: 47px;
+}
+
+.hero .hero-description {
+  width: 80%;
+  padding-top: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  padding-bottom: 2.5rem;
+  margin: 0 auto;
+}
+
+.hero .enroll a {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #0e1133;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+.hero .enroll a:hover {
+  background-color: #0e1133;
+  box-shadow: 0px 15px 20px rgba(14, 17, 51, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.hero .enroll button:active {
+  transform: translateY(-1px);
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+}
+
+.video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card-container {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 7rem;
+  gap: 1rem;
+}
+
+.card-container a{
+  text-decoration: none;
+}
+
+.card{
+  margin: 0px 50px;
+  background-color: #0e1133;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card-title{
+  letter-spacing: 2.5px;
+  color: white;
+  font-size: 1rem;
+}
+
+.card-body{
+  letter-spacing: 2.5px;
+  padding: 30px;
+  color: white;
+  font-size: 1rem;
+}
+
+.hint{
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+}
+
+.btn-simple{
+  display: block;
+  border: none;
+  height: 50px;
+  width: 150px;
+  font-size: 1.5rem;
+  border-radius: 13px;
+  margin: auto;
+  background-color: #0e1133;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btn-simple:hover{
+  background-color: white;
+  border: 1px solid #0e1133;
+  color: #0e1133
+}
+
+.footer {
+  background-color: #0E1133;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer a{
+  color: white;
+}
